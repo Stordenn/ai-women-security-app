@@ -1,8 +1,50 @@
-# ai-women-security-app
-One of my most impactful AI/ML projects is an AI-powered Women’s Security Application aimed at enhancing personal safety. The goal was to develop a system capable of detecting predefined distress gestures in real time and silently triggering emergency alerts with GPS location.
+# 🛡️ Silent Alert — Advancing Women's Security AI
 
-I built this project using a combination of computer vision and deep learning techniques. For real-time pose and hand gesture detection, I used MediaPipe Holistic, which provides accurate body and hand landmarks. These landmarks were processed through a Bidirectional LSTM (BiLSTM) neural network trained to classify distress gestures from live video frames. I developed the frontend using Streamlit to provide a simple and accessible interface, and integrated the Twilio API to send silent SMS alerts containing geolocation data to predefined emergency contacts.
+An AI-powered real-time system to detect distress gestures and silently send rescue alerts with geolocation, helping enhance women's personal safety.
 
-My contributions included designing the full system architecture, implementing the video processing pipeline, training and optimizing the BiLSTM model, building the user interface, and integrating the alert system. The prototype achieves ~95% accuracy in detecting gestures and triggers alerts in under 2 seconds.
+---
 
-This project taught me how to transform an AI model into a real-world, user-focused product and strengthened my ability to build end-to-end AI solutions with meaningful social impact.
+## 🚀 Project Overview
+
+This project is an **AI-based Women's Security Application** that uses computer vision and deep learning to:
+✅ Detect predefined distress gestures from video streams  
+✅ Classify gestures using a trained **BiLSTM neural network**  
+✅ Trigger **silent SMS alerts** with GPS location to predefined emergency contacts  
+
+Built using **MediaPipe**, **TensorFlow/Keras**, **OpenCV**, **Twilio API**, and **Streamlit**.
+
+---
+
+## 🎯 Key Features
+
+- Real-time video processing to detect gestures
+- Trained BiLSTM model for distress gesture classification (~95% accuracy)
+- Silent SMS alerts with GPS coordinates sent via Twilio
+- Streamlit-based user interface
+- Works with both **webcam** and **uploaded videos**
+- Toggle ON/OFF alert mode via UI
+- Geolocation fetched via `streamlit-geolocation` package
+
+---
+
+## 🛠️ Tech Stack
+
+- **MediaPipe Holistic** → Body & Hand landmark detection
+- **BiLSTM (TensorFlow/Keras)** → Gesture classification
+- **OpenCV** → Video stream processing
+- **Streamlit** → Frontend UI
+- **Twilio API** → SMS alerts with location
+- **Python** → Core logic
+- **Streamlit Geolocation** → To fetch user's latitude and longitude
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file (see `.env.example`) with:
+
+```txt
+TWILIO_ACCOUNT_SID=your_account_sid_here
+TWILIO_AUTH_TOKEN=your_auth_token_here
+TWILIO_PHONE_NUMBER=your_twilio_phone_number_here
+DESTINATION_PHONE_NUMBER=destination_number_here
